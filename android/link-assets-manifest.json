@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/font/Dosis-Bold.ttf",
+      "sha1": "0e47680d16b456c70bfcc22ed0b06363e203c78f"
+    },
+    {
+      "path": "assets/font/Dosis-ExtraBold.ttf",
+      "sha1": "8e6bf48fb78b3396c934d0891440950328aed60f"
+    },
+    {
+      "path": "assets/font/Dosis-ExtraLight.ttf",
+      "sha1": "e6578451e1f52dc098b9a62b62dd3e377f89df4a"
+    },
+    {
+      "path": "assets/font/Dosis-Light.ttf",
+      "sha1": "545c2a6e87753746df5e42e0c31d1a8350da1720"
+    },
+    {
+      "path": "assets/font/Dosis-Medium.ttf",
+      "sha1": "c3c8f543365f998847d74ad35e064a3fc380755a"
+    },
+    {
+      "path": "assets/font/Dosis-Regular.ttf",
+      "sha1": "b085ceb2b5dfd89cbabb6f6c639526ad30b16fba"
+    },
+    {
+      "path": "assets/font/Dosis-SemiBold.ttf",
+      "sha1": "3d5a17ffdb82cf81aa7f2c450496a168726e9b8a"
+    },
+    {
+      "path": "assets/font/Pacifico-Regular.ttf",
+      "sha1": "e31302d2fce7caf5cb86ddde0db78cdac47952bd"
+    },
+    {
+      "path": "assets/font/Pangolin-Regular.ttf",
+      "sha1": "e652002b7a54b4b280ee0e089433a0b71e9cd42c"
+    }
+  ]
+}
