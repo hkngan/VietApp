@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
     },
     txt:{
       fontFamily: 'Dosis-Bold',
-      fontSize: 17,
-      color: 'black'
+      fontSize: 18,
+      color: 'black',
+      margin: 5
     }
 })
