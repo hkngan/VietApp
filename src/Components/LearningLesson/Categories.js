@@ -27,7 +27,7 @@ const Categories = () => {
   return (
     <View style={styles.box}>
         {data.map((skill, index) => (
-            <TouchableOpacity key={index} style={styles.categories}>
+            <TouchableOpacity key={index} style={[styles.categories, styles.shadow_Prop]}>
                 <Image style={styles.img} source={skill.image}/>
                 <Text style={styles.txt}>{skill.title}</Text>
             </TouchableOpacity>
@@ -63,5 +63,12 @@ const styles = StyleSheet.create({
         fontFamily: 'Dosis-Bold',
         color: 'black'
 
-    }
+    },
+    shadow_Prop:{
+        shadowColor: "#000",
+        shadowOffset: {width: 1, height: 1,},
+        shadowOpacity: 0.18,
+        shadowRadius: 11.00,
+        elevation: 1,
+    },
 })

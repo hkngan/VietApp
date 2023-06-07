@@ -14,20 +14,24 @@ const SeachComponent = () => {
 export default SeachComponent
 
 const styles = StyleSheet.create({
-  
     image_background: {
         flex: 2,
         margin: 20,
         borderRadius: 20,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     txt: {
         fontFamily: 'Dosis-ExtraBold',
         fontSize: 28,
         textAlign: 'center',
         textTransform: 'uppercase',
-        color: '#001',
-        marginBottom: 10
+        color: 'white',
+        marginBottom: 10,
+        textShadowColor: 'black',
+        textShadowOffset: { width: 2, height: 2 },
+        textShadowRadius: 5,
     },
 });
+
+

@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         elevation: 1,
     },
     title:{
-        fontFamily: 'Dosis-ExtraBold',
+        fontFamily: 'Dosis-Bold',
         fontSize: 17,
         margin: 10,
         color: 'black',
