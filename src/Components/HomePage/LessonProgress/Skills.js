@@ -29,6 +29,7 @@ const Skills = () => {
     },
   ];
 
+
   return (
     <View style={styles.view5}>
       {skills.map((skill, index) => (

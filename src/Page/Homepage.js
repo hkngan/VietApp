@@ -8,22 +8,21 @@ const Homepage = () => {
   return (
       <ScrollView style={styles.container}>
           <View style={styles.view2}>
-              <Heading/>
+              <Heading />
               <ProgressHeader />
           </View>
           <View style={styles.view3}>
-          <View style={styles.view5}>
-              <Text style={styles.lesson_txt}>Your lesson</Text>
-              <Skills/>
+              <View style={styles.view5}>
+                  <Text style={styles.lesson_txt}>Your lesson</Text>
+                  <Skills />
+              </View>
+              <View>
+                  <Text style={styles.lesson_txt}>Your achievement</Text>
+                  <Achievement />
+              </View>
           </View>
-
-          <View >
-              <Text style={styles.lesson_txt}>Your achievement</Text>
-              <Achievement/>
-          </View>
-          </View>
-      </ScrollView >
-  )
+      </ScrollView>
+  );
 }
 
 export default Homepage
@@ -31,14 +30,14 @@ export default Homepage
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#EFF6F8',
+        backgroundColor: '#EDEDED',
     },
     view2:{
         flex: 3,
         backgroundColor: '#ffffff',
-        borderBottomEndRadius: 15,
-        borderBottomStartRadius: 15,
-        width: 400,
+        borderBottomEndRadius: 25,
+        borderBottomStartRadius: 25,
+        width: '100%',
         height: 300,
         alignSelf: 'center',
     },  

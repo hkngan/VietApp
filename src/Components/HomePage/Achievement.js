@@ -51,10 +51,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.18,
         shadowRadius: 11.00,
         elevation: 1,
-
     },
-    
-    
     lesson_txt:{
         margin: 10,
         fontSize: 17,

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 20,
         left: 60,
-        fontFamily: 'Dosis-Medium',
+        fontFamily: 'Dosis-SemiBold',
         fontSize: 18,
         color: 'black'
     },
