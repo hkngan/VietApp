@@ -87,7 +87,7 @@ const TrendingPage = () => {
     )
   return (
     <View>
-      <Heading/>
+      <Heading title={'Trending Words'}/>
       <FlatList data={data} renderItem={renderItem} keyExtractor={(item => item.id)}/>
     </View>
   )
@@ -98,6 +98,7 @@ export default TrendingPage
 const styles = StyleSheet.create({
     container:{
         backgroundColor: '#EDEDED',
+        flex: 1
     },
     textBox:{
         margin: 5,

@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Heading = () => {
+const Heading = ({title}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.txt}>Trending Words</Text>
+      <Text style={styles.txt}>{title}</Text>
     </View>
   )
 }
