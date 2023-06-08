@@ -3,9 +3,9 @@
  */
 
 import {AppRegistry} from 'react-native';
-import LearningLesson from './src/Page/LearningLesson';
+import TrendingPage from './src/Page/TrendingPage';
 import {name as appName} from './app.json';
 
 
-AppRegistry.registerComponent(appName, () => LearningLesson);
+AppRegistry.registerComponent(appName, () => TrendingPage);
 
