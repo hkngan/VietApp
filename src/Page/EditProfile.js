@@ -22,15 +22,18 @@ const EditProfile = () => {
               <Text style={styles.txt}>Your Profile</Text>
               <UserAvatar />
               <View style={styles.box}>
-                  <Input labeltext="Name" placeholder="Kim Ngân" />
-                  <Input labeltext="Username" placeholder="Username" />
-                  <Input labeltext="Password" placeholder="Password" />
-                  <Input labeltext="Email" placeholder="Email" />
+                  <Text style={styles.txtLabel}>Name</Text>
+                  <Input placeholder="Kim Ngân" />
+                  <Text style={styles.txtLabel}>Username</Text>
+                  <Input placeholder="Username" />
+                  <Text style={styles.txtLabel}>Password</Text>
+                  <Input placeholder="Password" />
+                  <Text style={styles.txtLabel}>Email</Text>
+                  <Input placeholder="Email" />
               </View>
               <View style={styles.box2}>
-                <UIButton title='UPDATE' style={styles.button}/>
-                <UIButton title='Cancle' style={styles.button}/>
-
+                  <UIButton title="UPDATE" style={styles.button} />
+                  <UIButton title="Cancle" style={styles.button} />
               </View>
           </View>
       </ScrollView>
@@ -93,5 +96,12 @@ const styles = StyleSheet.create({
         width: 300,
         alignSelf: 'center',
         alignContent: 'center',
-    }
+    },
+    txtLabel:{
+        fontSize: 18,
+        fontFamily: 'Montserrat-Bold',
+        color: 'black',
+        margin: 5,
+        bottom: 10
+      }
 })
