@@ -8,11 +8,11 @@ import Lesson from '../Components/LearningLesson/Lesson'
 const LearningLesson = () => {
   return (
       <ScrollView style={styles.container}>
-          <View style={styles.view2}>
+          {/* <View style={styles.view2}>
               <Heading />
-              <SeachComponent />
-          </View>
+          </View> */}
           <View style={styles.view3}>
+              <SeachComponent />
               <Text style={styles.txt}>Categories</Text>
               <Categories/>
               <Text style={styles.txt}>Popular Lesson</Text>
@@ -27,7 +27,7 @@ export default LearningLesson
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#EDEDED',
+        backgroundColor: '#F0EEED',
         flexDirection: 'column'
     },
     view2:{

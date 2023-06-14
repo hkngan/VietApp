@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-
 const Heading = ({title}) => {
   return (
     <View style={styles.container}>
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
         shadowRadius: 1.00,
         elevation: 1,
         paddingTop: 10,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     },
     txt:{
         textAlign: 'center',

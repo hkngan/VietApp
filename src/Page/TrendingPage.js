@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native'
 import React from 'react'
 import Heading from '../Components/TrendingPage/Heading'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import SearchBar from '../Components/LearningLesson/SearchBar'
 const TrendingPage = () => {
     const data=[
         {
@@ -28,66 +29,23 @@ const TrendingPage = () => {
             id: 5,
             word: 'Chả chua',
             means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 6,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 7,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 8,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 9,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 10,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 11,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 12,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 13,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
-        {
-            id: 14,
-            word: 'Chả chua',
-            means: 'Gợi cảm/Sexy'
-        },
+        }
+        
     ]
 
     const renderItem= ({item}) => (
-        <View style={styles.container}>
+        <View>
             <View style={styles.textBox}>
                 <Text style={styles.headertxt}>{item.word}</Text>
                 <Text style={styles.meanstxt}>{item.means}</Text>
-                <AntDesign style={styles.icon} name='sound' size={25}/>
+                <AntDesign style={styles.icon} name='sound' size={25} />
             </View>
         </View>
     )
   return (
-    <View>
-      <Heading title={'Trending Words'}/>
+    <View style={styles.container}>
+      <Heading title={'Trending Words'} />
+      <SearchBar/>
       <FlatList data={data} renderItem={renderItem} keyExtractor={(item => item.id)}/>
     </View>
   )
@@ -97,12 +55,15 @@ export default TrendingPage
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: '#EDEDED',
-        flex: 1
+        backgroundColor: '#F0EEED',
+        flex: 1,
+        alignItems: 'center',
+
     },
     textBox:{
-        margin: 5,
+        width: 400,
         padding: 15,
+        margin: 3,
         shadowColor: '#000',
         textShadowOffset: {height: 1, width: 1},
         shadowRadius: 1.00,
@@ -110,6 +71,7 @@ const styles = StyleSheet.create({
         elevation: 1,
         backgroundColor: 'white',
         borderRadius: 10
+        
     },
     headertxt:{
         fontFamily: 'Montserrat-SemiBold',
@@ -120,9 +82,10 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: 20,
         top: 20,
-        color: 'black'
+        color: '#002B5B'
     },
     meanstxt: {
         fontSize: 15
-    }
+    },
+    
 })

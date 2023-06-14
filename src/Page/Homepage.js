@@ -30,7 +30,7 @@ export default Homepage
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#EDEDED',
+        backgroundColor: '#F0EEED',
     },
     view2:{
         flex: 3,

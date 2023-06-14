@@ -1,30 +1,23 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-const Heading = () => {
-    const data = [
-        {
-            id: 1,
-            name: 'Kim Ngan',
-            type: 'Newbie',
-            avatar: require('../../../assets/image/user.png')
-        }
-    ]
-  return (
-    <View>
-        {data.map((info) => (
-                <View key={info.id} style={[styles.header, styles.shadow_Prop]}>
-                    <Image style={styles.avatar} source={info.avatar}/>
-                    <Text style={styles.nametxt}>{info.name}</Text>
-                    <Text style={styles.typetxt}>{info.type}</Text>
-                    <TouchableOpacity>
+import { image } from '../../../constants'
+function Heading ({navigation}) {
+   
+    return (
+        <View>
+                <View style={[styles.header, styles.shadow_Prop]}>
+                    <Image style={styles.avatar} source={image.avatar}/>
+                    <Text style={styles.nametxt}>Kim Ngân</Text>
+                    <Text style={styles.typetxt}>Beginner</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
                         <FontAwesome style={styles.editIcon} name="edit" size={30} color='#333'/>
                     </TouchableOpacity>
                 </View>
-        ))}
-    </View>
-  )
+        </View>
+    )
 }
+
 
 export default Heading
 

@@ -6,7 +6,7 @@ const SeachComponent = () => {
   return (
       <ImageBackground imageStyle={{ borderRadius: 40 }} style={styles.image_background} source={image.background}>
           <Text style={styles.txt}>Let’s learn together</Text>
-          <SearchBar style={styles.searchbar} />
+          <SearchBar/>
       </ImageBackground>
   );
 }
@@ -15,7 +15,8 @@ export default SeachComponent
 
 const styles = StyleSheet.create({
     image_background: {
-        flex: 2,
+        height: 250,
+        width: 350,
         margin: 20,
         borderRadius: 20,
         alignItems: 'center',
