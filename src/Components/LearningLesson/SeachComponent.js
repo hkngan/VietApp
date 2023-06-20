@@ -16,11 +16,11 @@ export default SeachComponent
 const styles = StyleSheet.create({
     image_background: {
         height: 250,
-        width: 350,
-        margin: 20,
+        width: '100%',
         borderRadius: 20,
         alignItems: 'center',
         justifyContent: 'center',
+        alignSelf: 'center'
     },
     txt: {
         fontFamily: 'Dosis-ExtraBold',

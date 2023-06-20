@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
+import {useNavigation} from '@react-navigation/native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-const UIButton = ({title, icon, color, func}) => {
+const UIButton = ({title, icon, color, event}) => {
     return (
-        <TouchableOpacity style={styles.buttonLogin} onPress={func}>
+        <TouchableOpacity style={styles.buttonLogin} onPress={event}>
             <Text style={styles.textBtn}>{title}</Text>
         </TouchableOpacity>
     );

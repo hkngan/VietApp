@@ -1,57 +1,58 @@
 import { StyleSheet, Text, View, ScrollView,} from 'react-native'
 import React from 'react' 
-import Skills from '../Components/HomePage/LessonProgress/Skills';
+import Skills from '../Components/HomePage/Skills';
 import ProgressHeader from '../Components/HomePage/ProgressHeader';
 import Heading from '../Components/HomePage/Heading'
-import Achievement from '../Components/HomePage/Achievement';
+import Categories from '../Components/LearningLesson/Categories';
+import {useNavigation} from '@react-navigation/native'
+import Lesson from '../Components/LearningLesson/Lesson';
+import { transparent } from 'react-native-paper/lib/typescript/src/styles/themes/v2/colors';
 const Homepage = () => {
-  return (
-      <ScrollView style={styles.container}>
-          <View style={styles.view2}>
-              <Heading />
-              <ProgressHeader />
-          </View>
-          <View style={styles.view3}>
-              <View style={styles.view5}>
-                  <Text style={styles.lesson_txt}>Your lesson</Text>
-                  <Skills />
-              </View>
-              <View>
-                  <Text style={styles.lesson_txt}>Your achievement</Text>
-                  <Achievement />
-              </View>
-          </View>
-      </ScrollView>
-  );
-}
+    const navigation = useNavigation()
+    const navigaToAnnouceScreen = () => {
+        navigation.navigate('AnnouncePageStack')
+    }
+    return (
+        <ScrollView style={styles.container}>
+            <View style={styles.view2}>
+                <Heading navigaToAnnouceScreen={navigaToAnnouceScreen}/>
+                <ProgressHeader />
+            </View>
+            <View style={styles.view3}>
+                <Text style={styles.lesson_txt}>Recent process</Text>
+                <Skills />
+                <Text style={styles.lesson_txt}>Recent topics</Text>
+                <Lesson />
+            </View>
+            
+        </ScrollView>
+    );
+};
 
 export default Homepage
 
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#F0EEED',
+        backgroundColor: '#ECF2FF',
     },
     view2:{
         flex: 3,
-        backgroundColor: '#ffffff',
         borderBottomEndRadius: 25,
         borderBottomStartRadius: 25,
         width: '100%',
-        height: 300,
+        height: 290,
         alignSelf: 'center',
     },  
     view3:{
-        margin: 10
-    },
-    view5:{
-        flex: 6,
-       
+        margin: 10,   
     },
     lesson_txt:{
         fontFamily: 'Dosis-Bold',
         color: 'black',
-        fontSize: 17
+        fontSize: 20,
+        marginBottom: 5,
+        marginTop: 5
     }
       
 })

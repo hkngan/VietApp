@@ -44,22 +44,23 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
         top: 5,
-        marginBottom: 10
+        width: '100%'
     },
     categories:{
-        width: 85,
-        height: 85,
+        width: 180,
+        height: 100,
         borderRadius: 15,
         backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginBottom: 10
     },
     img:{
-        width: 60,
-        height: 60,
+        width: 70,
+        height: 70,
     },
     txt: {
-        fontSize: 15,
+        fontSize: 18,
         fontFamily: 'Dosis-Bold',
         color: 'black'
 

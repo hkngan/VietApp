@@ -15,6 +15,7 @@ export default Input
 const styles = StyleSheet.create({
   container:{
     margin: 5,
+    alignSelf: 'center'
   },
   textinput:{
     width: 350,

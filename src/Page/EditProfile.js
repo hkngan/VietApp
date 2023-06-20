@@ -1,63 +1,57 @@
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native'
-import Input from '../Components/EditProfile/Input'
-import React from 'react'
-import UserAvatar from '../Components/EditProfile/UserAvatar'
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import Input from '../Components/EditProfile/Input';
+import React from 'react';
+import UserAvatar from '../Components/EditProfile/UserAvatar';
 import { useNavigation } from '@react-navigation/native';
-import UIButton from '../Components/LoginPage/UIButton'
+import UIButton from '../Components/LoginPage/UIButton';
 
 const EditProfile = () => {
-    const navigation = useNavigation();
-    const goBackToProfilePage = () => {
-        navigation.goBack('ProfilePage')
-    }
+    const navigation = useNavigation()
+    return (
+        <ScrollView style={styles.container}>
+            <View>
+                <View style={styles.boxBtn}>
+                    <TouchableOpacity onPress={() => navigation.goBack('ProfilePageStack')} style={styles.backBtn}>
+                        <Text style={styles.txtBtn}>Done</Text>
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.txt}>Your Profile</Text>
+                <UserAvatar />
+                <View style={styles.box}>
+                    <Text style={styles.txt}>Name</Text>
+                    <Input placeholder="Kim Ngân" />
+                    <Text style={styles.txt}>Username</Text>
+                    <Input placeholder="Username" />
+                    <Text style={styles.txt}>Password</Text>
+                    <Input placeholder="Password" />
+                    <Text style={styles.txt}>Email</Text>
+                    <Input placeholder="Email" />
+                </View>
+                <View style={styles.box2}>
+                    <UIButton  title="UPDATE" style={styles.button} />              
+                </View>
+            </View>
+        </ScrollView>
+    );
+};
 
-  return (
-      <ScrollView style={styles.container}>
-          <View>
-              <View style={styles.boxBtn}>
-                  <TouchableOpacity onPress={goBackToProfilePage} style={styles.backBtn}>
-                      <Text style={styles.txtBtn}>Done</Text>
-                  </TouchableOpacity>
-              </View>
-              <Text style={styles.txt}>Your Profile</Text>
-              <UserAvatar />
-              <View style={styles.box}>
-                  <Text style={styles.txtLabel}>Name</Text>
-                  <Input placeholder="Kim Ngân" />
-                  <Text style={styles.txtLabel}>Username</Text>
-                  <Input placeholder="Username" />
-                  <Text style={styles.txtLabel}>Password</Text>
-                  <Input placeholder="Password" />
-                  <Text style={styles.txtLabel}>Email</Text>
-                  <Input placeholder="Email" />
-              </View>
-              <View style={styles.box2}>
-                  <UIButton title="UPDATE" style={styles.button} />
-                  <UIButton title="Cancle" style={styles.button} />
-              </View>
-          </View>
-      </ScrollView>
-  );
-}
-
-export default EditProfile
+export default EditProfile;
 
 const styles = StyleSheet.create({
-    container:{
-        backgroundColor: '#F0EEED'
+    container: {
+        backgroundColor: '#ECF2FF'
     },
-    box:{
+    box: {
         justifyContent: 'center',
-        alignItems: 'center',
         flex: 1,
     },
-    txt:{
+    txt: {
         fontFamily: 'Montserrat-Bold',
         fontSize: 18,
-        marginLeft: 10,
+        marginLeft: 30,
         color: 'black',
     },
-    txtBtn:{
+    txtBtn: {
         fontFamily: 'Montserrat-Bold',
         fontSize: 18,
         marginLeft: 10,
@@ -65,11 +59,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         textAlign: 'auto',
     },
-    backBtn:{
-       width: 70,
-
+    backBtn: {
+        width: 70,
     },
-    boxBtn:{
+    boxBtn: {
         alignItems: 'flex-end',
         height: 50,
         width: '100%',
@@ -83,13 +76,11 @@ const styles = StyleSheet.create({
         elevation: 1.00,
         shadowRadius: 18.00,
         justifyContent: 'center'
-        
-
     },
-    button:{
+    button: {
         backgroundColor: 'green'
     },
-    box2:{
+    box2: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -97,11 +88,5 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         alignContent: 'center',
     },
-    txtLabel:{
-        fontSize: 18,
-        fontFamily: 'Montserrat-Bold',
-        color: 'black',
-        margin: 5,
-        bottom: 10
-      }
-})
+   
+});

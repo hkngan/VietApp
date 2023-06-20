@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
         width: '90%',
         margin: 10,
         alignSelf: 'center',
-        borderRadius: 20
+        borderRadius: 10,
+        top: 10
     },
     img:{
         width: 90,
