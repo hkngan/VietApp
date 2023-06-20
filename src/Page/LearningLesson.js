@@ -4,8 +4,15 @@ import Heading from '../Components/HomePage/Heading';
 import SeachComponent from '../Components/LearningLesson/SeachComponent';
 import Categories from '../Components/LearningLesson/Categories';
 import Lesson from '../Components/LearningLesson/Lesson';
-
+import {useNavigation} from '@react-navigation/native'
 const LearningLesson = () => {
+    const navigation = useNavigation()
+    const navigateToAllTopic = () => {
+        navigation.navigate('AllTopicStack')
+    }
+    const navigateToTopicDetail = () => {
+        navigation.navigate('TopicDetailStack')
+    }
     return (
         <ScrollView style={styles.container}>
             <View style={styles.box}>
@@ -14,11 +21,11 @@ const LearningLesson = () => {
                 <Categories />
                 <View style={styles.txtView}>
                     <Text style={styles.txt1}>Popular Topic</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={navigateToAllTopic}>
                         <Text style={styles.txt2}>See all</Text>
                     </TouchableOpacity>
                 </View>
-                <Lesson />
+                <Lesson navigateToTopicDetail={navigateToTopicDetail}/>
             </View>
         </ScrollView>
     );

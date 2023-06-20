@@ -1,15 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import Homepage from '../Page/Homepage';
-import LearningLesson from '../Page/LearningLesson';
-import TrendingPage from '../Page/TrendingPage';
-import AnnoucePage from '../Page/AnnoucePage';
-import ProfilePage from '../Page/ProfilePage';
-import EditProfile from '../Page/EditProfile';
-import Login from '../Page/Login';
-import Registration from '../Page/Registration';
-import SkillLesson from '../Page/SkillLesson';
+import {Homepage, LearningLesson, Practice, AllTopic, AnnoucePage, ProfilePage,EditProfile, Login, Registration,SkillLesson,TopicDetail} from '../Page';
 const Stack = createStackNavigator();
 const HomeStack = () => {
     return (
@@ -25,14 +17,16 @@ const LearningPageStack = () => {
     return (
             <Stack.Navigator>
                 <Stack.Screen name="LearningLessonStack" component={LearningLesson} options={{ headerShown: false }} />
+                <Stack.Screen name="AllTopicStack" component={AllTopic} options={{ headerShown: false }} />
+                <Stack.Screen name="TopicDetailStack" component={TopicDetail} options={{ headerShown: false }} />
             </Stack.Navigator>
     );
 };
 
-const TrendingStack = () => {
+const PracticeStack = () => {
     return (
             <Stack.Navigator>
-                <Stack.Screen name="TrendingPageStack" component={TrendingPage} options={{ headerShown: false }} />
+                <Stack.Screen name="PracticePageStack" component={Practice} options={{ headerShown: false }} />
             </Stack.Navigator>
     );
 };
@@ -69,5 +63,5 @@ const WelcomeStack = () => {
 }
 
 
-export { HomeStack, LearningPageStack, ProfileStack, TrendingStack };
+export { HomeStack, LearningPageStack, ProfileStack, PracticeStack };
 const styles = StyleSheet.create({});

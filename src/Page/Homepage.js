@@ -3,14 +3,15 @@ import React from 'react'
 import Skills from '../Components/HomePage/Skills';
 import ProgressHeader from '../Components/HomePage/ProgressHeader';
 import Heading from '../Components/HomePage/Heading'
-import Categories from '../Components/LearningLesson/Categories';
 import {useNavigation} from '@react-navigation/native'
 import Lesson from '../Components/LearningLesson/Lesson';
-import { transparent } from 'react-native-paper/lib/typescript/src/styles/themes/v2/colors';
 const Homepage = () => {
     const navigation = useNavigation()
     const navigaToAnnouceScreen = () => {
         navigation.navigate('AnnouncePageStack')
+    }
+    const navigateToTopicDetail = () => {
+        navigation.navigate('TopicDetailStack')
     }
     return (
         <ScrollView style={styles.container}>
@@ -22,7 +23,7 @@ const Homepage = () => {
                 <Text style={styles.lesson_txt}>Recent process</Text>
                 <Skills />
                 <Text style={styles.lesson_txt}>Recent topics</Text>
-                <Lesson />
+                <Lesson navigateToTopicDetail={navigateToTopicDetail} />
             </View>
             
         </ScrollView>

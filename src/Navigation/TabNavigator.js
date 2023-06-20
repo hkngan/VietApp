@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import 'react-native-gesture-handler';
-import { HomeStack, LearningPageStack, ProfileStack, AnnounceStack, TrendingStack } from './StackNavigator';
+import { HomeStack, LearningPageStack, ProfileStack, PracticeStack } from './StackNavigator';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -31,8 +31,8 @@ const BottomTab = () => {
                 }}
             />
             <Tab.Screen
-                name="TrendingTab"
-                component={TrendingStack}
+                name="PracticeTab"
+                component={PracticeStack}
                 options={{
                     headerShown: false,
                     tabBarIcon: ({ color, size }) => <Ionicons name="trending-up" color="#F6BA6F" size={32} />,

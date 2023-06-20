@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView} from 'react-native'
 import React from 'react'
 
-const Lesson = ({backgroundColor}) => {
+const Lesson = ({navigateToTopicDetail}) => {
     const data = [
         {
             id: 1,
@@ -39,7 +39,7 @@ const Lesson = ({backgroundColor}) => {
   return (
       <ScrollView horizontal style={styles.box}>
           {data.map((lesson, index) => (
-              <TouchableOpacity key={index} style={[styles.item, styles.shadow_Prop]}>
+              <TouchableOpacity onPress={navigateToTopicDetail} key={index} style={[styles.item, styles.shadow_Prop]}>
                   <Text style={styles.title}>{lesson.title}</Text>
                   <Text style={styles.amount}>0/{lesson.amount}</Text>
                   <Image source={lesson.image} style={styles.img} />

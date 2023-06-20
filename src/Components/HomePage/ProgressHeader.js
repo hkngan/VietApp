@@ -4,7 +4,7 @@ import ProgressCircle from 'react-native-progress-circle'
 
 const ProgressHeader = () => {
   return (
-    <View style={styles.view4}>
+    <View style={[styles.view4, styles.shadow]}>
       <ProgressCircle
         percent={30}
         radius={50}
@@ -27,9 +27,11 @@ const styles = StyleSheet.create({
     view4:{
         flex:2,
         backgroundColor: '#FFEBEB',
-        margin: 20,
         borderRadius: 15,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        width: 350,
+        alignSelf: 'center'
+        
     },
     txt_progress:{
         fontSize: 25,
@@ -51,5 +53,15 @@ const styles = StyleSheet.create({
         width: 180,
         position: 'absolute'
     },
+    shadow:{
+      shadowColor: '#555',
+      shadowOffset: {
+        height: 1,
+        width: 1
+      },
+      shadowOpacity: 18.00,
+      shadowRadius: 18.00,
+      elevation: 2
+    }
 
 })
