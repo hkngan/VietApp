@@ -25,7 +25,9 @@ const LearningLesson = () => {
                         <Text style={styles.txt2}>See all</Text>
                     </TouchableOpacity>
                 </View>
-                <Lesson navigateToTopicDetail={navigateToTopicDetail}/>
+                <ScrollView horizontal>
+                    <Lesson navigateToTopicDetail={navigateToTopicDetail} />
+                </ScrollView>
             </View>
         </ScrollView>
     );
@@ -36,10 +38,9 @@ export default LearningLesson;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ECF2FF',
+        backgroundColor: '#D2E9E9',
         flexDirection: 'column',
     },
-
     box: {
         flex: 1,
         padding: 20,

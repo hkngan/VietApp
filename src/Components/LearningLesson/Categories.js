@@ -1,32 +1,11 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-
+import { categoriesData } from '../Data'
 const Categories = () => {
-    const data = [
-        {
-            id: 1,
-            title: 'Reading',
-            image: require('../../../assets/image/reading.png')
-        },
-        {
-            id: 2,
-            title: 'Speaking',
-            image: require('../../../assets/image/speaking.png')
-        },
-        {
-            id: 3,
-            title: 'Listening',
-            image: require('../../../assets/image/listening.png')
-        },
-        {
-            id: 4,
-            title: 'Writing',
-            image: require('../../../assets/image/writing.png')
-        },
-    ]
+   
   return (
     <View style={styles.box}>
-        {data.map((skill, index) => (
+        {categoriesData.map((skill, index) => (
             <TouchableOpacity key={index} style={[styles.categories, styles.shadow_Prop]}>
                 <Image style={styles.img} source={skill.image}/>
                 <Text style={styles.txt}>{skill.title}</Text>

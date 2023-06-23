@@ -20,7 +20,7 @@ export default AnnoucePage
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor: '#ECF2FF',
+    backgroundColor: '#D2E9E9',
   },
   icon:{
     height:30,

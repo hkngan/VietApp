@@ -8,7 +8,7 @@ import Lesson from '../Components/LearningLesson/Lesson';
 const Homepage = () => {
     const navigation = useNavigation()
     const navigaToAnnouceScreen = () => {
-        navigation.navigate('AnnouncePageStack')
+        navigation.navigate('AnnoucePageStack')
     }
     const navigateToTopicDetail = () => {
         navigation.navigate('TopicDetailStack')
@@ -16,16 +16,17 @@ const Homepage = () => {
     return (
         <ScrollView style={styles.container}>
             <View style={styles.view2}>
-                <Heading navigaToAnnouceScreen={navigaToAnnouceScreen}/>
+                <Heading navigaToAnnouceScreen={navigaToAnnouceScreen} />
                 <ProgressHeader />
             </View>
             <View style={styles.view3}>
                 <Text style={styles.lesson_txt}>Recent process</Text>
                 <Skills />
                 <Text style={styles.lesson_txt}>Recent topics</Text>
-                <Lesson navigateToTopicDetail={navigateToTopicDetail} />
+                <ScrollView horizontal>
+                    <Lesson navigateToTopicDetail={navigateToTopicDetail} />
+                </ScrollView>
             </View>
-            
         </ScrollView>
     );
 };
@@ -35,7 +36,7 @@ export default Homepage
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#ECF2FF',
+        backgroundColor: '#D2E9E9',
     },
     view2:{
         flex: 3,

@@ -26,7 +26,7 @@ export default ProgressHeader
 const styles = StyleSheet.create({
     view4:{
         flex:2,
-        backgroundColor: '#FFEBEB',
+        backgroundColor: '#ffffff',
         borderRadius: 15,
         justifyContent: 'center',
         width: 350,
@@ -54,14 +54,14 @@ const styles = StyleSheet.create({
         position: 'absolute'
     },
     shadow:{
-      shadowColor: '#555',
+      shadowColor: '#000',
       shadowOffset: {
-        height: 1,
-        width: 1
+        height: 3,
+        width: 3
       },
-      shadowOpacity: 18.00,
-      shadowRadius: 18.00,
-      elevation: 2
+      shadowOpacity: 20.00,
+      shadowRadius: 20.00,
+      elevation: 5
     }
 
 })

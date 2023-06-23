@@ -1,52 +1,18 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView} from 'react-native'
 import React from 'react'
-
+import { topicsData } from '../Data';
 const Lesson = ({navigateToTopicDetail}) => {
-    const data = [
-        {
-            id: 1,
-            title: 'Country',
-            amount: '3',
-            image: require('../../../assets/image/countries.png')
-        },
-        {
-            id: 2,
-            title: 'Job',
-            amount: '3',
-            image: require('../../../assets/image/job.png')
-        },
-        {
-            id:3,
-            title: 'Grocery',
-            amount: '3',
-            image: require('../../../assets/image/grocery.png')
-        },
-        {
-            id: 4,
-            title: 'Books',
-            amount: '3',
-            image: require('../../../assets/image/book.png')
-        },
-        {
-            id: 1,
-            title: 'Gender',
-            amount: '3',
-            image: require('../../../assets/image/gender.png')
-        },
-       
-        
-    ]
+    
   return (
-      <ScrollView horizontal style={styles.box}>
-          {data.map((lesson, index) => (
+      <View style={styles.box}>
+          {topicsData.map((lesson, index) => (
               <TouchableOpacity onPress={navigateToTopicDetail} key={index} style={[styles.item, styles.shadow_Prop]}>
                   <Text style={styles.title}>{lesson.title}</Text>
                   <Text style={styles.amount}>0/{lesson.amount}</Text>
                   <Image source={lesson.image} style={styles.img} />
-
               </TouchableOpacity>
           ))}
-      </ScrollView >
+      </View >
   );
 }
 
@@ -54,6 +20,7 @@ export default Lesson
 
 const styles = StyleSheet.create({
     box:{
+        flexDirection: 'row'
     },
     shadow_Prop:{
         shadowColor: "#000",
@@ -72,7 +39,6 @@ const styles = StyleSheet.create({
         padding: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row'
     },
     img:{
         width: 100,

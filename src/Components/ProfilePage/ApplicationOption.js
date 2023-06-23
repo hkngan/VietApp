@@ -21,11 +21,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: 15,
+        shadowColor: '#000',
+       
     },
     txt:{
         fontFamily: 'Dosis-SemiBold',
         fontSize: 20,
-        color: 'black',
+        color: '#555',
         textAlign: 'center',
     },
     boxicon:{

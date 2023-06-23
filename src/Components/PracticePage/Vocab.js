@@ -5,7 +5,7 @@ const Vocab = () => {
   return (
       <TouchableOpacity style={styles.container}>
           <View style={styles.icon}>
-              <MaterialCommunityIcons name="alpha-a-box" size={40} color="black" />
+              <MaterialCommunityIcons name="alpha-a-box" size={32} color="#ffffff" />
           </View>
           <Text style={styles.txt}>Vocabulary</Text>
       </TouchableOpacity>
@@ -34,7 +34,13 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     icon:{
-        marginRight: 10
+        backgroundColor: '#F2B6A0',
+        height: 50,
+        width: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 80,
+        marginRight: 15
     },
     txt:{
         color: 'black',

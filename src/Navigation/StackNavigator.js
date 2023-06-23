@@ -1,67 +1,25 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import {Homepage, LearningLesson, Practice, AllTopic, AnnoucePage, ProfilePage,EditProfile, Login, Registration,SkillLesson,TopicDetail} from '../Page';
+import { AllTopic, AnnoucePage, EditProfile, Login, Registration, SkillLesson, TopicDetail, QuizPage} from '../Page';
+import BottomTab from './TabNavigator';
 const Stack = createStackNavigator();
-const HomeStack = () => {
-    return (
-            <Stack.Navigator>
-                <Stack.Screen name="HomepageStack" component={Homepage} options={{ headerShown: false }} />
-                <Stack.Screen name='LessonStack' component={SkillLesson} options={{headerShown: false}} />
-                <Stack.Screen name="AnnouncePageStack" component={AnnoucePage} options={{ headerShown: false }} />
-            </Stack.Navigator>
-    );
-};
-
-const LearningPageStack = () => {
-    return (
-            <Stack.Navigator>
-                <Stack.Screen name="LearningLessonStack" component={LearningLesson} options={{ headerShown: false }} />
-                <Stack.Screen name="AllTopicStack" component={AllTopic} options={{ headerShown: false }} />
-                <Stack.Screen name="TopicDetailStack" component={TopicDetail} options={{ headerShown: false }} />
-            </Stack.Navigator>
-    );
-};
-
-const PracticeStack = () => {
-    return (
-            <Stack.Navigator>
-                <Stack.Screen name="PracticePageStack" component={Practice} options={{ headerShown: false }} />
-            </Stack.Navigator>
-    );
-};
-
-const ProfileStack = () => {
-    return (
-            <Stack.Navigator>
-                <Stack.Screen name="ProfilePageStack" component={ProfilePage} options={{ headerShown: false }} />
-                <Stack.Screen name="EditProfilePageStack" component={EditProfile} options={{ headerShown: false }} />
-            </Stack.Navigator>
-    );
-};
-
-const LoginStack = () => {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen name='LoginStack' component={Login} options={{headerShown: false}}/>
-        </Stack.Navigator>
-    )
-}
-const RegistrationStack = () => {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen name='RegistrationStack' component={Registration} options={{headerShown: false}}/>
-        </Stack.Navigator>
-    )
-}
-const WelcomeStack = () => {
+const StackNavigator = () => {
     return(
-        <Stack.Navigator>
-            <Stack.Screen name='WelcomeStack' component={WelcomeStack}/>
-        </Stack.Navigator>
+
+    <Stack.Navigator>
+        <Stack.Screen name='Tab' component={BottomTab} options={{headerShown: false}}/>
+        <Stack.Screen name='AllTopicStack' component={AllTopic} options={{headerShown: false}}/>
+        <Stack.Screen name='AnnoucePageStack' component={AnnoucePage} options={{headerShown: false}}/>
+        <Stack.Screen name='EditProfileStack' component={EditProfile} options={{headerShown: false}}/>
+        <Stack.Screen name='LoginStack' component={Login} options={{headerShown: false}}/>
+        <Stack.Screen name='RegistrationStack' component={Registration} options={{headerShown: false}}/>
+        <Stack.Screen name='SkillLessonStack' component={SkillLesson} options={{headerShown: false}}/>
+        <Stack.Screen name='TopicDetailStack' component={TopicDetail} options={{headerShown: false}}/>
+        <Stack.Screen name='QuizPageStack' component={QuizPage} options={{headerShown: false}}/>
+    </Stack.Navigator>
     )
 }
 
-
-export { HomeStack, LearningPageStack, ProfileStack, PracticeStack };
+export default StackNavigator;
 const styles = StyleSheet.create({});

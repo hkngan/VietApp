@@ -1,38 +1,12 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { ProgressBar, MD3Colors } from 'react-native-paper';
+import { skillsData } from '../Data';
 const Skills = () => {
-  const skills = [
-    {
-      id: 1,
-      image: require('../../../assets/image/reading.png'),
-      title: 'Reading',
-      content: 'Begining | 30%',
-    },
-    {
-      id: 2,
-      image: require('../../../assets/image/speaking.png'),
-      title: 'Speaking',
-      content: 'Begining | 30%',
-    },
-    {
-      id: 3,
-      image: require('../../../assets/image/writing.png'),
-      title: 'Writing',
-      content: 'Begining | 30%',
-    },
-    {
-      id: 4,
-      image: require('../../../assets/image/listening.png'),
-      title: 'Listening',
-      content: 'Begining | 30%',
-    },
-  ];
-
 
   return (
       <View style={styles.view5}>
-          {skills.map((skill, index) => (
+          {skillsData.map((skill, index) => (
               <TouchableOpacity style={[styles.view7, styles.shadowProp]} key={index}>
                   <View style={styles.borderImg}>
                       <Image style={styles.skill_img} source={skill.image} />

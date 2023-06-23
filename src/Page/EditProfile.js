@@ -8,30 +8,32 @@ import UIButton from '../Components/LoginPage/UIButton';
 const EditProfile = () => {
     const navigation = useNavigation()
     return (
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
             <View>
                 <View style={styles.boxBtn}>
                     <TouchableOpacity onPress={() => navigation.goBack('ProfilePageStack')} style={styles.backBtn}>
                         <Text style={styles.txtBtn}>Done</Text>
                     </TouchableOpacity>
                 </View>
-                <Text style={styles.txt}>Your Profile</Text>
-                <UserAvatar />
                 <View style={styles.box}>
-                    <Text style={styles.txt}>Name</Text>
-                    <Input placeholder="Kim Ngân" />
-                    <Text style={styles.txt}>Username</Text>
-                    <Input placeholder="Username" />
-                    <Text style={styles.txt}>Password</Text>
-                    <Input placeholder="Password" />
-                    <Text style={styles.txt}>Email</Text>
-                    <Input placeholder="Email" />
-                </View>
-                <View style={styles.box2}>
-                    <UIButton  title="UPDATE" style={styles.button} />              
+                    <Text style={styles.txt}>Your Profile</Text>
+                    <UserAvatar />
+                    <View>
+                        <Text style={styles.txt}>Name</Text>
+                        <Input placeholder="Kim Ngân" />
+                        <Text style={styles.txt}>Username</Text>
+                        <Input placeholder="Username" />
+                        <Text style={styles.txt}>Password</Text>
+                        <Input placeholder="Password" />
+                        <Text style={styles.txt}>Email</Text>
+                        <Input placeholder="Email" />
+                    </View>
+                    <View style={styles.box2}>
+                        <UIButton title="UPDATE" style={styles.button} />
+                    </View>
                 </View>
             </View>
-        </ScrollView>
+        </View>
     );
 };
 
@@ -39,11 +41,24 @@ export default EditProfile;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#ECF2FF'
+        backgroundColor: '#D2E9E9'
     },
     box: {
+        paddingTop: 30,
+        backgroundColor: 'white',
+        marginTop: 10,
         justifyContent: 'center',
-        flex: 1,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        shadowColor: '#000',
+        shadowOffset: {
+            height:3,
+            width:3
+        },
+        shadowOpacity: 30.00,
+        shadowRadius: 30.00,
+        elevation:10,
+        minHeight: 780
     },
     txt: {
         fontFamily: 'Montserrat-Bold',
@@ -81,7 +96,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'green'
     },
     box2: {
-        flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
         width: 300,

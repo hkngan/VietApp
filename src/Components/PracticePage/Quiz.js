@@ -1,10 +1,10 @@
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-const Quiz = () => {
+const Quiz = ({navigateToQuizScreen}) => {
     return (
-        <TouchableOpacity style={styles.container}>
-            <View style={styles.icon}><FontAwesome5 name="list-alt" size={40} color="black" /></View>
+        <TouchableOpacity onPress={navigateToQuizScreen} style={styles.container}>
+            <View style={styles.icon}><FontAwesome5 name="list-alt" size={32} color="#ffffff" /></View>
             <Text style={styles.txt}>Quiz</Text>
         </TouchableOpacity>
     );
@@ -32,8 +32,13 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     icon:{
-        marginRight: 10
-    },
+        backgroundColor: '#F2B6A0',
+        height: 50,
+        width: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 80,
+        marginRight: 15    },
     txt:{
         color: 'black',
         fontSize: 20,

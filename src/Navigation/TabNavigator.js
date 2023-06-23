@@ -1,8 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import 'react-native-gesture-handler';
-import { HomeStack, LearningPageStack, ProfileStack, PracticeStack } from './StackNavigator';
+import {Homepage, LearningLesson, Practice, ProfilePage} from '../Page'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 
 
@@ -14,34 +15,34 @@ const BottomTab = () => {
     <Tab.Navigator>
             <Tab.Screen
                 name="HomepageTab"
-                component={HomeStack}
+                component={Homepage}
                 options={{
                     headerShown: false,
-                    tabBarIcon: ({ color, size }) => <FontAwesome name="home" color="#262A56" size={32} />,
+                    tabBarIcon: ({ color, size }) => <FontAwesome name="home" color="#7AA874" size={32} />,
                     tabBarShowLabel: false,                   
                     }}
             />
             <Tab.Screen
                 name="LearningTab"
-                component={LearningPageStack}
+                component={LearningLesson}
                 options={{
                     headerShown: false,
-                    tabBarIcon: ({ size, color }) => <Ionicons name="book" color="#6DA9E4" size={32} />,
+                    tabBarIcon: ({ size, color }) => <Entypo name="book" color="#6DA9E4" size={32} />,
                     tabBarShowLabel: false,
                 }}
             />
             <Tab.Screen
                 name="PracticeTab"
-                component={PracticeStack}
+                component={Practice}
                 options={{
                     headerShown: false,
-                    tabBarIcon: ({ color, size }) => <Ionicons name="trending-up" color="#F6BA6F" size={32} />,
+                    tabBarIcon: ({ color, size }) => <Entypo name="news" color="#F6BA6F" size={32} />,
                     tabBarShowLabel: false,
                 }}
             />
             <Tab.Screen
                 name="ProfileTab"
-                component={ProfileStack}
+                component={ProfilePage}
                 options={{
                     headerShown: false,
                     tabBarIcon: ({ color, size }) => <FontAwesome name="user" color="#FF78C4" size={32} />,

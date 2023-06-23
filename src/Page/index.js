@@ -9,5 +9,5 @@ import Registration from './Registration';
 import SkillLesson from './SkillLesson';
 import AllTopic from './AllTopic';
 import TopicDetail from './TopicDetail';
-
-export {Homepage, LearningLesson, Practice, AllTopic, AnnoucePage, ProfilePage,EditProfile, Login, Registration,SkillLesson,TopicDetail}
+import QuizPage from './QuizPage';
+export {Homepage, LearningLesson, Practice, AllTopic, AnnoucePage, ProfilePage,EditProfile, Login, Registration,SkillLesson,TopicDetail, QuizPage}
