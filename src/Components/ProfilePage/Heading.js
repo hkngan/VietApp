@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: 150,
         top: -30,
+        justifyContent: 'center',
+        alignItems: 'center'
+     
     },
     nametxt: {
         fontFamily: 'Dosis-SemiBold',
@@ -53,7 +56,8 @@ const styles = StyleSheet.create({
         top: -30
     },
     editIcon: {
-        marginLeft: 10
+        marginLeft: 10,
+        top: 2
     },
 
 });

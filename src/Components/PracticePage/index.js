@@ -1,5 +1,3 @@
-import Grammar from "./Grammar";
-import Quiz from "./Quiz";
-import Vocab from "./Vocab";
+import PraceticeType from "./PraceticeType";
 
-export {Grammar, Quiz, Vocab}
+export {PraceticeType}

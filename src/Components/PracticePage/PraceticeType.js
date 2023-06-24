@@ -1,18 +1,16 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React from 'react'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-const Vocab = () => {
-  return (
-      <TouchableOpacity style={styles.container}>
-          <View style={styles.icon}>
-              <MaterialCommunityIcons name="alpha-a-box" size={32} color="#ffffff" />
-          </View>
-          <Text style={styles.txt}>Vocabulary</Text>
-      </TouchableOpacity>
-  );
-}
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+const PraceticeType = ({navigateToQuizScreen, title, name}) => {
+    return (
+        <TouchableOpacity onPress={navigateToQuizScreen} style={styles.container}>
+            <View style={styles.icon}><FontAwesome5 name={name} size={25} color="#ffffff" /></View>
+            <Text style={styles.txt}>{title}</Text>
+        </TouchableOpacity>
+    );
+};
 
-export default Vocab
+export default PraceticeType;
 
 const styles = StyleSheet.create({
     container: {
@@ -34,14 +32,13 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     icon:{
-        backgroundColor: '#F2B6A0',
+        backgroundColor: '#1F8A70',
         height: 50,
         width: 50,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 80,
-        marginRight: 15
-    },
+        marginRight: 15    },
     txt:{
         color: 'black',
         fontSize: 20,
