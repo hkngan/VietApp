@@ -3,8 +3,7 @@ import Input from '../Components/EditProfile/Input';
 import React from 'react';
 import UserAvatar from '../Components/EditProfile/UserAvatar';
 import { useNavigation } from '@react-navigation/native';
-import UIButton from '../Components/LoginPage/UIButton';
-
+import { UIButton } from '../Components/LoginPage';
 const EditProfile = () => {
     const navigation = useNavigation()
     return (
@@ -29,7 +28,7 @@ const EditProfile = () => {
                         <Input placeholder="Email" />
                     </View>
                     <View style={styles.box2}>
-                        <UIButton title="UPDATE" style={styles.button} />
+                        <UIButton title="UPDATE" style={styles.button} backgroundColor='#47A992' />
                     </View>
                 </View>
             </View>

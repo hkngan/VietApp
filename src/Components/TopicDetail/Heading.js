@@ -25,7 +25,8 @@ const style = StyleSheet.create({
         top: 10
     },
     icon:{
-        left: 5
+        left: 5,
+
     },
     txt: {
         color: 'black',

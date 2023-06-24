@@ -4,7 +4,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {image} from '../../../constants'
-const Lesson = ({ title, level, backgroundColor }) => {
+const Lesson = ({ title, level, backgroundColor, navigateToStudyView }) => {
     const style = {
         icon: {
             backgroundColor: backgroundColor,
@@ -17,7 +17,7 @@ const Lesson = ({ title, level, backgroundColor }) => {
         },
     }
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={navigateToStudyView}>
             <View style={style.icon}>
                 <FontAwesome name="list-alt" color="white" size={32} />
             </View>

@@ -8,14 +8,17 @@ import {
     TitleLesson,
 } from '../Components/TopicDetail';
 import { data, trickData, storyLessonData  } from '../Components/Data';
+import {useNavigation} from '@react-navigation/native'
 const TopicDetail = () => {
+    const navigation = useNavigation()
+    
     return (
         <View style={style.container}>
             <Heading title="Country" />
             <View style={style.box}>
                 <TitleLesson backgroundColor="#176B87" title="Learning by practice" />
                 {data.map((lesson) => (
-                    <Lesson key={lesson.id} title={lesson.title} level={lesson.level} backgroundColor="#176B87" />
+                    <Lesson key={lesson.id} title={lesson.title} level={lesson.level} backgroundColor="#176B87" navigateToStudyView={() => navigation.navigate('StudyViewStack')} />
                 ))}
 
                 {trickData.map((trick) => (

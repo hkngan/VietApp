@@ -10,4 +10,5 @@ import SkillLesson from './SkillLesson';
 import AllTopic from './AllTopic';
 import TopicDetail from './TopicDetail';
 import QuizPage from './QuizPage';
-export {Homepage, LearningLesson, Practice, AllTopic, AnnoucePage, ProfilePage,EditProfile, Login, Registration,SkillLesson,TopicDetail, QuizPage}
+import StudyView from './StudyView';
+export {Homepage, LearningLesson, Practice, AllTopic, AnnoucePage, ProfilePage,EditProfile, Login, Registration,SkillLesson,TopicDetail, QuizPage, StudyView}

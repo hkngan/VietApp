@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { AllTopic, AnnoucePage, EditProfile, Login, Registration, SkillLesson, TopicDetail, QuizPage} from '../Page';
+import { AllTopic, AnnoucePage, EditProfile, Login, Registration, SkillLesson, TopicDetail, QuizPage, StudyView} from '../Page';
 import BottomTab from './TabNavigator';
 const Stack = createStackNavigator();
 const StackNavigator = () => {
@@ -17,6 +17,7 @@ const StackNavigator = () => {
         <Stack.Screen name='SkillLessonStack' component={SkillLesson} options={{headerShown: false}}/>
         <Stack.Screen name='TopicDetailStack' component={TopicDetail} options={{headerShown: false}}/>
         <Stack.Screen name='QuizPageStack' component={QuizPage} options={{headerShown: false}}/>
+        <Stack.Screen name='StudyViewStack' component={StudyView} options={{headerShown: false}}/>
     </Stack.Navigator>
     )
 }
