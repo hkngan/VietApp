@@ -1,8 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import React from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Ionicons, MaterialCommunityIcons} from '@expo/vector-icons';
 import {image} from '../../../constants'
 const Lesson = ({ title, level, backgroundColor, navigateToStudyView }) => {
     const style = {
@@ -68,7 +67,7 @@ const StoryLesson = ({icon, title, backgroundColor}) => {
         <View>
             <TouchableOpacity style={styles.container}>
                 <View style={style.icon}>
-                    <Ionicons name={icon} color="white" size={32} />
+                    <Ionicons name={icon} color="white" size={20} />
                 </View>
                 <Text style={styles.txtStoryContainer}>{title}</Text>
                 <FontAwesome style={styles.icon1} name="long-arrow-right" size={32} color="#1F8A70" />
@@ -112,12 +111,12 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         shadowColor: '#001C30',
         shadowOffset: {
-            height: 3,
-            width: 3,
+            height: 1,
+            width: 1,
         },
-        shadowOpacity: 80.0,
-        shadowRadius: 80.0,
-        elevation: 3,
+        shadowOpacity: 0.15,
+        shadowRadius: 10.0,
+        elevation: 1,
         alignItems: 'center',
     },
     

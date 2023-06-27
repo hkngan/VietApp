@@ -3,20 +3,21 @@ import React from 'react'
 import LottieView from 'lottie-react-native'
 import { PraceticeType } from '../Components/PracticePage'
 import { useNavigation } from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 const Practice = () => {
     const navigation = useNavigation()
     const navigateToQuizScreen = () => {
         navigation.navigate('QuizStack')
     }
     return(
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <LottieView style={styles.animation} source={require('../../assets/logo/logo.json')} autoPlay loop/>
            <View style={styles.box}>
                <PraceticeType title='Quiz' name='list-ul'/>
                <PraceticeType title='Vocabulary' name='ad'/>
                <PraceticeType title='Grammar' name='bars'/>
            </View>
-        </View>
+        </SafeAreaView>
   )
 }
 

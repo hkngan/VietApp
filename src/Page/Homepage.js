@@ -3,58 +3,67 @@ import React from 'react'
 import Skills from '../Components/HomePage/Skills';
 import ProgressHeader from '../Components/HomePage/ProgressHeader';
 import Heading from '../Components/HomePage/Heading'
-import {useNavigation} from '@react-navigation/native'
 import Lesson from '../Components/LearningLesson/Lesson';
+import {useNavigation} from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {useFonts} from 'expo-font'
+
 const Homepage = () => {
-    const navigation = useNavigation()
+    const navigation = useNavigation();
     const navigaToAnnouceScreen = () => {
-        navigation.navigate('AnnoucePageStack')
-    }
+        navigation.navigate('AnnoucePageStack');
+    };
     const navigateToTopicDetail = () => {
-        navigation.navigate('TopicDetailStack')
-    }
+        navigation.navigate('TopicDetailStack');
+    };
+
+    const [fontsLoaded] = useFonts({
+        'Quicksand-Medium': require('../../assets/font/Quicksand-Medium.ttf'),
+        'Quicksand-SemiBold': require('../../assets/font/Quicksand-SemiBold.ttf')
+
+    })
     return (
-        <ScrollView style={styles.container}>
-            <View style={styles.view2}>
-                <Heading navigaToAnnouceScreen={navigaToAnnouceScreen} />
-                <ProgressHeader />
-            </View>
-            <View style={styles.view3}>
-                <Text style={styles.lesson_txt}>Recent process</Text>
-                <Skills />
-                <Text style={styles.lesson_txt}>Recent topics</Text>
-                <ScrollView horizontal>
-                    <Lesson navigateToTopicDetail={navigateToTopicDetail} />
+        <View style={styles.container}>
+            <SafeAreaView style={styles.view1}>
+                <View style={styles.header}>
+                    <Heading navigaToAnnouceScreen={navigaToAnnouceScreen}/>
+                </View>
+                <ScrollView contentInset={{bottom: 50}} style={styles.content}>
+                    <ProgressHeader/>
+                    <Text style={styles.txt}>Recent process</Text>
+                    <Skills />
+                    <Text style={styles.txt}>Recent topics</Text>
+                    <ScrollView horizontal>
+                        <Lesson navigateToTopicDetail={navigateToTopicDetail} />
+                    </ScrollView>
                 </ScrollView>
-            </View>
-        </ScrollView>
+            </SafeAreaView>
+        </View>
     );
 };
 
 export default Homepage
 
+const HEADER_HEIGHT = 70
 const styles = StyleSheet.create({
     container:{
-        flex: 1,
+        flex:1,
+        height: 100,
         backgroundColor: '#D2E9E9',
     },
-    view2:{
-        flex: 3,
-        borderBottomEndRadius: 25,
-        borderBottomStartRadius: 25,
-        width: '100%',
-        height: 290,
-        alignSelf: 'center',
-    },  
-    view3:{
-        margin: 10,   
+    header:{
+        height: HEADER_HEIGHT,
     },
-    lesson_txt:{
-        fontFamily: 'Dosis-Bold',
-        color: 'black',
-        fontSize: 20,
-        marginBottom: 5,
-        marginTop: 5
+    content:{
+        paddingTop: 5,
+        position: 'relative',
+    },
+    txt: {
+        marginLeft: 20,
+        marginTop: 10,
+        fontSize: 17,
+        fontFamily: 'Quicksand-SemiBold'
     }
+    
       
 })

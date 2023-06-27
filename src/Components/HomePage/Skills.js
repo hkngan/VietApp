@@ -2,8 +2,12 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { ProgressBar, MD3Colors } from 'react-native-paper';
 import { skillsData } from '../Data';
+import { useFonts } from 'expo-font';
 const Skills = () => {
-
+    const [fontsLoaded] = useFonts({
+        'Quicksand-Medium': require('../../../assets/font/Quicksand-Medium.ttf'),
+        'Quicksand-SemiBold': require('../../../assets/font/Quicksand-SemiBold.ttf')
+    })
   return (
       <View style={styles.view5}>
           {skillsData.map((skill, index) => (
@@ -50,7 +54,7 @@ const styles = StyleSheet.create({
     title_skill: {
         position: 'absolute',
         color: 'black',
-        fontFamily: 'Dosis-Bold',
+        fontFamily: 'Quicksand-SemiBold',
         fontSize: 22,
         left: 100,
         top: 30,
@@ -59,7 +63,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 100,
         fontSize: 15,
-        fontFamily: 'Dosis-Regular',
+        fontFamily: 'Quicksand-Medium',
         color: 'black',
         top: 60,
     },

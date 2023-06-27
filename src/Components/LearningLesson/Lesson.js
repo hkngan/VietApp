@@ -1,8 +1,12 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView} from 'react-native'
 import React from 'react'
 import { topicsData } from '../Data';
+import { useFonts } from 'expo-font';
 const Lesson = ({navigateToTopicDetail}) => {
-    
+    const [fontsLoaded] = useFonts({
+        'Quicksand-Medium': require('../../../assets/font/Quicksand-Medium.ttf'),
+        'Quicksand-SemiBold': require('../../../assets/font/Quicksand-SemiBold.ttf')
+    })
   return (
       <View style={styles.box}>
           {topicsData.map((lesson, index) => (
@@ -26,7 +30,7 @@ const styles = StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {width: 1, height: 1,},
         shadowOpacity: 0.18,
-        shadowRadius: 11.00,
+        shadowRadius: 1.00,
         elevation: 1,
     },
     item:{
@@ -49,18 +53,18 @@ const styles = StyleSheet.create({
    
     title:{
         position: 'absolute',
-        fontFamily: 'Dosis-Bold',
+        fontFamily: 'Quicksand-SemiBold',
         fontSize: 20,
         color: 'black',
         left: 20,
-        top: 15
+        top: 15,
         
     },
     amount:{
         position: 'absolute',
         left: 20,
         top: 40,
-        fontFamily: 'Dosis-Bold',
-        fontStyle: 'italic'
+        fontFamily: 'Quicksand-Medium',
+        fontStyle: 'italic',
     }
 })

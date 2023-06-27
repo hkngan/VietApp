@@ -4,10 +4,11 @@ import React from 'react';
 import UserAvatar from '../Components/EditProfile/UserAvatar';
 import { useNavigation } from '@react-navigation/native';
 import { UIButton } from '../Components/LoginPage';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const EditProfile = () => {
     const navigation = useNavigation()
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View>
                 <View style={styles.boxBtn}>
                     <TouchableOpacity onPress={() => navigation.goBack('ProfilePageStack')} style={styles.backBtn}>
@@ -17,7 +18,7 @@ const EditProfile = () => {
                 <View style={styles.box}>
                     <Text style={styles.txt}>Your Profile</Text>
                     <UserAvatar />
-                    <View>
+                    <View style={styles.box1}>
                         <Text style={styles.txt}>Name</Text>
                         <Input placeholder="Kim Ngân" />
                         <Text style={styles.txt}>Username</Text>
@@ -32,7 +33,7 @@ const EditProfile = () => {
                     </View>
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -40,29 +41,31 @@ export default EditProfile;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#D2E9E9'
+        backgroundColor: '#D2E9E9',
+        flex: 1
     },
     box: {
+        height: '100%',
         paddingTop: 30,
         backgroundColor: 'white',
         marginTop: 10,
-        justifyContent: 'center',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         shadowColor: '#000',
         shadowOffset: {
-            height:3,
-            width:3
+            height:1,
+            width:1
         },
-        shadowOpacity: 30.00,
-        shadowRadius: 30.00,
-        elevation:10,
-        minHeight: 780
+        shadowOpacity: 0.12,
+        shadowRadius: 1.00,
+        elevation:1,
+        alignItems: 'center'
+        
     },
     txt: {
+        width: 350,
         fontFamily: 'Montserrat-Bold',
         fontSize: 18,
-        marginLeft: 30,
         color: 'black',
     },
     txtBtn: {
@@ -86,9 +89,9 @@ const styles = StyleSheet.create({
             height: 1,
             width: 1
         },
-        shadowOpacity: 1,
-        elevation: 1.00,
-        shadowRadius: 18.00,
+        shadowOpacity: 0.12,
+        elevation: 1,
+        shadowRadius: 1.00,
         justifyContent: 'center'
     },
     button: {
@@ -101,5 +104,8 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         alignContent: 'center',
     },
+    box1: {
+        alignItems: 'center'   
+}
    
 });

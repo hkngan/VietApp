@@ -5,6 +5,7 @@ import SeachComponent from '../Components/LearningLesson/SeachComponent';
 import Categories from '../Components/LearningLesson/Categories';
 import Lesson from '../Components/LearningLesson/Lesson';
 import {useNavigation} from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context';
 const LearningLesson = () => {
     const navigation = useNavigation()
     const navigateToAllTopic = () => {
@@ -15,20 +16,22 @@ const LearningLesson = () => {
     }
     return (
         <ScrollView style={styles.container}>
-            <View style={styles.box}>
-                <SeachComponent />
-                <Text style={styles.txt}>Categories</Text>
-                <Categories />
-                <View style={styles.txtView}>
-                    <Text style={styles.txt1}>Popular Topic</Text>
-                    <TouchableOpacity onPress={navigateToAllTopic}>
-                        <Text style={styles.txt2}>See all</Text>
-                    </TouchableOpacity>
+            <SafeAreaView>
+                <View style={styles.box}>
+                    <SeachComponent />
+                    <Text style={styles.txt}>Categories</Text>
+                    <Categories />
+                    <View style={styles.txtView}>
+                        <Text style={styles.txt1}>Popular Topic</Text>
+                        <TouchableOpacity onPress={navigateToAllTopic}>
+                            <Text style={styles.txt2}>See all</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <ScrollView horizontal>
+                        <Lesson navigateToTopicDetail={navigateToTopicDetail} />
+                    </ScrollView>
                 </View>
-                <ScrollView horizontal>
-                    <Lesson navigateToTopicDetail={navigateToTopicDetail} />
-                </ScrollView>
-            </View>
+            </SafeAreaView>
         </ScrollView>
     );
 };

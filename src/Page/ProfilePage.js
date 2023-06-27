@@ -5,6 +5,7 @@ import ApplicationOption from '../Components/ProfilePage/ApplicationOption';
 import { image } from '../../constants';
 import Heading from '../Components/ProfilePage/Heading';
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 function ProfilePage() {
     const navigation = useNavigation();
     const navigateToEditProfile = () => {
@@ -13,7 +14,7 @@ function ProfilePage() {
 
     return (
         <ScrollView style={styles.container}>
-               <View style={styles.box}>
+               <SafeAreaView style={styles.box}>
                     <View style={styles.header}>
                         <Heading navigateToEditProfile={navigateToEditProfile} />
                     </View>
@@ -31,8 +32,7 @@ function ProfilePage() {
                         </TouchableOpacity>
                         <ApplicationOption title="Logout Account" />
                     </View>
-               </View>
-          
+               </SafeAreaView>
         </ScrollView>
     );
 }
@@ -52,12 +52,12 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         shadowColor: '#000',
         shadowOffset: {
-            height:3,
-            width:3
+            height:1,
+            width:1
         },
-        shadowOpacity: 30.00,
-        shadowRadius: 30.00,
-        elevation:10
+        shadowOpacity: 0.12,
+        shadowRadius: 1.00,
+        elevation:1
     },
     card1: {
         margin: 20,

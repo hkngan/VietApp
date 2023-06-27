@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         shadowColor: "#000",
-        shadowOffset: {width: 20, height: 2,},
-        shadowOpacity: 5.00,
-        shadowRadius: 5.00,
+        shadowOffset: {width: 1, height: 1,},
+        shadowOpacity: 0.20,
+        shadowRadius: 1.00,
         elevation: 2,
     },
     img:{

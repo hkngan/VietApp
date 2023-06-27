@@ -1,17 +1,18 @@
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 import React from 'react'
 import AnnouceBox from '../Components/AnnoucePage/AnnouceBox'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import {Ionicons} from '@expo/vector-icons'
 import {useNavigation} from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 const AnnoucePage = () => {
   const navigation = useNavigation()
   return (
-      <View style={styles.container}>
-          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.icon}>
-              <Ionicons name="arrow-back-outline" color="black" size={32} />
-          </TouchableOpacity>
-          <AnnouceBox />
-      </View>
+      <SafeAreaView style={styles.container}>
+            <TouchableOpacity onPress={() => navigation.goBack()} style={styles.icon}>
+                <Ionicons name="arrow-back-outline" color="black" size={32} />
+            </TouchableOpacity>
+            <AnnouceBox />
+      </SafeAreaView>
   );
 }
 

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     text1:{
         fontSize: 35,
-        fontFamily: 'Dosis-Bold',
+        // fontFamily: 'Dosis-Bold',
         marginBottom: 20,
         color: '#DDE6ED',
         textAlign: 'center'
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         width: 350,
         textAlign: 'center',
         color: '#CCF3EE',
-        fontFamily: 'Dosis-Medium',
+        // fontFamily: 'Dosis-Medium',
         fontSize: 17,
     },
     icon: {
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     txtButton:{
         textAlign: 'center',
         color: '#000000',
-        fontFamily: 'Dosis-Bold',
+        // fontFamily: 'Dosis-Bold',
         fontSize: 18,
         top: 9
     }

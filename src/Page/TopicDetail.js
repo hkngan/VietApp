@@ -9,11 +9,12 @@ import {
 } from '../Components/TopicDetail';
 import { data, trickData, storyLessonData  } from '../Components/Data';
 import {useNavigation} from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context';
 const TopicDetail = () => {
     const navigation = useNavigation()
     
     return (
-        <View style={style.container}>
+        <SafeAreaView style={style.container}>
             <Heading title="Country" />
             <View style={style.box}>
                 <TitleLesson backgroundColor="#176B87" title="Learning by practice" />
@@ -38,7 +39,7 @@ const TopicDetail = () => {
                     ))}
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -50,7 +51,7 @@ const style = StyleSheet.create({
         backgroundColor: '#D2E9E9',
     },
     box: {
-        backgroundColor: 'white',
+        backgroundColor: '#EEEEEE',
         flex: 1,
         padding: 20,
         borderTopRightRadius: 35,
@@ -58,12 +59,12 @@ const style = StyleSheet.create({
         paddingTop: 20,
         shadowColor: '#000',
         shadowOffset: {
-            height:3,
-            width:3
+            height:1,
+            width:1
         },
-        shadowOpacity: 30.00,
-        shadowRadius: 30.00,
-        elevation: 5
+        shadowOpacity: 0.2,
+        shadowRadius: 1.00,
+        elevation: 1
     },
     box2:{
       top: 15

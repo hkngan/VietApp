@@ -5,7 +5,7 @@ import { image } from '../../../constants'
 const Input = ({placeholder, labeltext}) => {
   return (
     <View style={styles.container}>
-        <TextInput style={styles.textinput} placeholder={placeholder} />
+        <TextInput style={styles.textinput} placeholder={placeholder} placeholderTextColor='black' />
     </View>
   )
 }
@@ -30,9 +30,10 @@ const styles = StyleSheet.create({
     shadowOffset: {
     height:1, width:1
     },
-    shadowOpacity: 40.00,
-    shadowRadius: 20.00,
-    elevation: 2.00
+    shadowOpacity: 0.18,
+    shadowRadius: 2.00,
+    elevation: 1,
+  
   },
   
 })
